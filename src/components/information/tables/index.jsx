@@ -1,0 +1,65 @@
+import React from "react";
+import { Table } from "antd";
+import { useTranslation } from "react-i18next";
+import "./style.css";
+
+const Tables = () => {
+  const { t } = useTranslation();
+  const columns = [
+    {
+      title: t("Custumer.16"),
+      dataIndex: "size",
+      align: "center",
+    },
+    {
+      title: t("Custumer.17"),
+      dataIndex: "cm",
+      align: "center",
+    },
+    {
+      title: t("Custumer.18"),
+      dataIndex: "cm1",
+      align: "center",
+    },
+    {
+      title: t("Custumer.19"),
+      dataIndex: "cm2",
+      align: "center",
+    },
+    {
+      title: t("Custumer.20"),
+      dataIndex: "cm3",
+      align: "center",
+    },
+  ];
+  const data = [];
+  const arr = [1, 2, 3, 4];
+
+  {
+    arr.map(() => {
+      data.push({
+        key: "1",
+        size: "88/92",
+        cm: "87-94",
+        cm1: "88-95",
+        cm2: "89-96",
+        cm3: "90-97",
+      });
+    });
+  }
+  return (
+    <>
+      <Table
+        scroll={{
+          x: 1000,
+        }}
+        columns={columns}
+        dataSource={data}
+        bordered
+        pagination={false}
+      />
+    </>
+  );
+};
+
+export default Tables;

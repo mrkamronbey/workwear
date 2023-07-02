@@ -1,0 +1,9 @@
+.ant-card-body{
+    padding: 15px 20px !important;
+}
+.ant-card-body > p{
+    text-align: flex-start;
+}
+/* .ant-card-cover{
+    padding: 20px !important;
+} */

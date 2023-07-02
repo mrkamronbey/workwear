@@ -1,0 +1,25 @@
+.ant-table-thead > tr > .ant-table-cell {
+  color: #fff !important;
+  font-family: "Rubik" !important;
+  font-style: bold !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  background: #9796f0 !important;
+  padding: 25px 0 !important;
+  border: none !important;
+}
+.ant-table-thead {
+  background: #9796f0 !important;
+}
+
+.ant-table-row > .ant-table-cell {
+  padding: 30px 0 !important;
+}
+
+@media only screen and (max-width: 478px) {
+  .ant-table-thead > tr > .ant-table-cell,
+  .ant-table-row > .ant-table-cell {
+    font-size: 14px !important;
+    padding: 15px 0 !important;
+  }
+}

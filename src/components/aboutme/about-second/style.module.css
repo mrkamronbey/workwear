@@ -1,0 +1,41 @@
+.about_second_section {
+  padding: 40px 0;
+}
+.about_second_row {
+  margin: 0 !important;
+}
+
+.about_second_col > img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px 2px rgba(34, 60, 80, 0.2);
+}
+.about_second_col > h4 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 42px;
+  color: #334da6;
+  margin-top: 0;
+}
+.about_second_col > p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #383e5e;
+}
+
+@media only screen and (max-width: 425px) {
+  .about_second_col > p {
+    text-align: justify;
+    font-size: 16px;
+  }
+  .about_second_col > h4{
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+  }
+}

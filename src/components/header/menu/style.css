@@ -1,0 +1,68 @@
+.chakra-menu__menu-button {
+  color: #000 !important;
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+.chakra-icon {
+  font-size: 30px !important;
+}
+
+.chakra-menu__menu-list {
+  border-radius: 10px;
+  /* border: 1px solid red; */
+  background-color: #fff;
+  padding: 0;
+}
+.css-0 {
+  width: 100% !important;
+  border-radius: 20px !important;
+  z-index: 100000000000000000 !important;
+}
+.css-sjt5nk {
+  width: 100%;
+  background-color: #fff !important;
+  padding: 15px 0 15px 15px;
+  border-radius: 10px !important;
+}
+
+.chakra-menu__menuitem {
+  border: none !important;
+  padding: 7px 15px 7px 0;
+  background-color: #fff;
+}
+
+.ru_btn,
+.en_btn {
+  border: none;
+  background-color: transparent;
+  color: #fff !important;
+}
+
+.ant-space-item > i {
+  margin-right: 10px;
+  font-size: 27px;
+  color: rgb(186, 187, 189);
+}
+
+@media only screen and (max-width: 490px) {
+  .css-0 {
+    width: 350px !important;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .css-0 {
+    width: 320px !important;
+  }
+}
+@media only screen and (max-width: 347px) {
+  .css-0 {
+    width: 300px !important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .css-0 {
+    width: 290px !important;
+  }
+}

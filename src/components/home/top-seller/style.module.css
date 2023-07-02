@@ -1,0 +1,33 @@
+.top_seller_section {
+  padding: 50px 0 0 0;
+}
+.product_col {
+  margin-bottom: 40px;
+}
+.product_row {
+  margin: 0 !important;
+}
+.product_title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 65px;
+  color: #222227;
+  padding-left: 15px;
+}
+
+.product_col a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .product_title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .top_seller_section {
+    padding: 20px 0 0 0;
+  }
+}

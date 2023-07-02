@@ -1,0 +1,68 @@
+.about_card_section {
+  padding: 30px 0;
+}
+
+.about_card_title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 52px;
+  color: #111b51;
+  padding-left: 10px;
+}
+
+.about_card_row {
+  margin: 0 !important;
+}
+
+.about_card_col {
+  margin-bottom: 20px;
+}
+
+.about_card_item {
+  /* width: 100%; */
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  transition: 0.3s;
+  border: 2px solid #eee;
+}
+.about_card_item:hover {
+  box-shadow: 4px 4px 5px 2px rgba(34, 60, 80, 0.2);
+}
+
+.about_card_item > h4 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 52px;
+  color: #111b51;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.about_card_item > p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #686c90;
+}
+
+@media only screen and (max-width: 425px) {
+  .about_card_title {
+    font-size: 26px;
+    text-align: center;
+  }
+  .about_card_item > h4{
+    font-size: 20px;
+    text-align: center;
+  }
+  .about_card_item > p{
+    font-size: 14px;
+    text-align: justify;
+  }
+}

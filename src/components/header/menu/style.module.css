@@ -1,0 +1,73 @@
+.menu_box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.menu_box > a > i {
+  margin-right: 15px;
+  font-size: 27px;
+  color: rgb(186, 187, 189);
+}
+.menu_box > a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 105.5%;
+  color: #272525;
+  text-decoration: none;
+}
+
+.lang_box_media {
+  display: none;
+}
+
+.lang_btn_wrapp {
+  display: flex;
+  align-items: center;
+}
+.lang_box_media > .lang_btn_wrapp > button {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 105.5%;
+  color: #fff !important;
+  background: transparent !important;
+  outline: none !important;
+  cursor: pointer !important;
+  border: none !important;
+  transition: 0.1s;
+}
+
+.isActvie {
+  height: 100% !important;
+}
+
+.active {
+  height: 100% !important;
+  background: #1fab8a !important;
+  border-radius: 6px !important;
+  color: #fff !important;
+  padding: 10px;
+}
+
+.active.menu_box > a {
+  color: #fff;
+}
+
+@media only screen and (max-width: 425px) {
+  .lang_box_media {
+    display: flex;
+    width: 100%;
+    background: #1fab8a;
+    padding: 10px 0 10px 10px;
+    color: #fff;
+    border-radius: 15px;
+  }
+}

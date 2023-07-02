@@ -1,0 +1,268 @@
+.contact_section {
+  padding: 40px 0;
+}
+
+.contact_title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 62px;
+  color: #111b51;
+  padding-left: 15px;
+}
+
+.contact_row {
+  margin: 0 !important;
+}
+
+.contact_col_item_bg {
+  background-image: url("../../assets/slider/contactBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 30px;
+  color: #fff;
+}
+.contact_col:nth-child(2) {
+  background: #fff;
+}
+
+.contact_col_item {
+  padding: 30px;
+}
+
+.contact_local > h4 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #aabeff;
+}
+
+.contact_local > p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #ffffff;
+}
+
+.contact_time_box > h4 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #aabeff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contact_time_box > h4 > span {
+  margin-left: 30px;
+}
+
+.contact_time_box > a {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.contact_inn > ul {
+  padding-left: 0;
+  list-style: none;
+  width: 100%;
+}
+.contact_inn > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact_inn > ul > li > div:nth-child(2) > p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.contact_inn > ul > li > div:nth-child(1) > p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #aabeff;
+}
+
+.contact_inn > ul > li > div {
+  width: 45%;
+}
+
+.contact_inn > ul > li > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.input_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input_box > input:nth-child(1) {
+  margin-right: 20px;
+}
+
+.form_box {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.form_box > input {
+  width: 95%;
+  margin-top: 40px;
+}
+
+.btn_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.btn_box > p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 22px;
+  color: #686c90;
+  max-width: 300px;
+}
+
+.contact_col_item > h4 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #111b51;
+}
+
+.btn_box > button {
+  background: radial-gradient(100% 100% at 50% 0%, #7834be 0%, #294194 100%);
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 20px 35px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn_box > button:hover {
+  transform: scale(0.9);
+}
+
+.contact_map {
+  margin-top: 100px;
+}
+@media only screen and (max-width: 1116px) {
+  .btn_box > button {
+    padding: 15px 30px;
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 1042px) {
+  .btn_box{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .contact_col {
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .input_box {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn_box {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .input_box > input:nth-child(1) {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .form_box > input {
+    width: 100%;
+  }
+  .form_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact_inn > ul > li {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contact_inn > ul > li {
+    margin-bottom: 15px;
+  }
+
+  .contact_inn > ul > li > div > p {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .btn_box > button {
+    font-size: 10px;
+  }
+
+  .input_box > input::placeholder {
+    font-size: 14px;
+  }
+}

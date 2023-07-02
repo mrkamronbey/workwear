@@ -1,0 +1,31 @@
+.catalog_section {
+    padding: 170px 0 50px 0;
+  }
+  .catalog_row{
+    margin: 0 !important;
+  }
+  .catalog_col {
+    margin-bottom: 40px;
+  }
+  .catalog_title {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 65px;
+    color: #222227;
+    padding-left: 15px;
+  }
+  
+  .catalog_col a {
+    text-decoration: none;
+  }
+  
+  @media only screen and (max-width: 375px) {
+    .catalog_title {
+      font-size: 30px;
+      text-align: center;
+      padding: 0;
+    }
+  }
+  

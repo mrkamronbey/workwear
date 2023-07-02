@@ -1,0 +1,117 @@
+
+.headertop_section_mobile {
+  display: none;
+  padding: 20px 0;
+  background: #fff;
+}
+.contant_links > a,
+.contant_links_mobile > a {
+  background: #1fab8a;
+  box-shadow: 0px 6px 25px rgba(121, 129, 173, 0.45);
+  border-radius: 90px;
+  padding: 15px 60px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 105.5%;
+  color: #eef1f6;
+  text-decoration: none;
+  transition: .2s;
+}
+.is-sticky.contant_links > a,
+.contant_links_mobile > a{
+  padding: 10px 60px;
+}
+.contant_links > a:hover,
+.contant_links_mobile > a:hover{
+  transform: scale(0.9);
+}
+.contant_links {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contant_links_mobile {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_logo {
+  height: 53px;
+}
+.header_top_lang {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 100px;
+}
+.header_top_lang_mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.headercol_mobile {
+  padding: 0 !important;
+}
+.headercol {
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headercol:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.headercol:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.headerrow {
+  margin: 0 !important;
+}
+.headerrow_mobile {
+  margin: 0 !important;
+  display: none !important;
+}
+.menu_header {
+  display: none;
+}
+
+/* @media only screen and (max-width: 1298px) {
+  .headerrow {
+    padding: 0 20px !important;
+  }
+} */
+/* @media only screen and (max-width: 1098px) {
+  .headerrow{
+    display: none !important;
+  }
+  .headerrow_mobile{
+    display: flex !important;
+    padding: 0 20px !important;
+  }
+} */
+/* @media only screen and (max-width: 840px) {
+  
+} */
+/* @media only screen and (max-width: 768px) {
+  .headertop_section_mobile {
+    display: flex;
+  }
+  .header_top_lang {
+    display: none;
+  }
+  .menu_header {
+    display: block;
+  }
+} */

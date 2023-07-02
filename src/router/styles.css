@@ -1,0 +1,17 @@
+.spin_wrapp {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(38.95deg, #9796f0 -10.38%, #fbc7d4 107.56%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  position: relative;
+}
+
+@media only screen and (max-width: 425px) {
+  .spin_wrapp > img {
+    width: 120px;
+    object-fit: cover;
+  }
+}

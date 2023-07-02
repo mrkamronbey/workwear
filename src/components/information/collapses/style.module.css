@@ -1,0 +1,52 @@
+.infor_content_box > h3 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 130%;
+  color: #272525;
+}
+.infor_content_box > p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #454747;
+}
+
+/* .infor_row{
+    margin: 0 !important;
+} */
+.infor_col:nth-child(2) {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.infor_col > i {
+  font-size: 350px;
+  color: #9796f0;
+}
+
+.accor_wrapp {
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+}
+.infor_space {
+  width: 100% !important;
+}
+
+.accor_content > h4 {
+  font-family: "Rubik";
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #454747;
+}
+.accor_content > ul {
+  padding: 0 0 0 16px;
+  margin: 0;
+}
