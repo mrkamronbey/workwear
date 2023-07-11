@@ -6,6 +6,10 @@
   margin: 0 !important;
 }
 
+.details_wrapper > h4 > span:nth-child(1){
+  text-transform: uppercase;
+}
+
 .details_col {
   display: flex !important;
   align-items: center !important;

@@ -24,6 +24,7 @@ const CatalogComponent = () => {
 
   const categoryGets = useSelector((state) => state.category.categoryGet?.data)
   const findData = categoryGets.filter(elem => elem.id == id)
+ 
   useEffect(() => {
     dispatch(CategoryGet())
   }, [])
@@ -32,7 +33,22 @@ const CatalogComponent = () => {
     <>
       <div className={styles.catalog_section}>
         <BigContainer>
-          <h2 className={styles.catalog_title}>{t("Home.3")}</h2>
+          {
+            findData.map(elem => (
+              <h2 className={styles.catalog_title}>
+                {LanguValue() === "ru" ? (
+                  elem.title_ru
+                ) : LanguValue() === "uz" ? (
+                  elem.title_uz
+                ) : LanguValue() === "en" ? (
+                  elem.title_en
+                ) : (
+                  elem.title_ru
+                )}
+              </h2>
+            ))
+          }
+
           <Row className={styles.catalog_row}>
             {
               findData.map(elem => elem.products.map(el => (

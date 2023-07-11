@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./style.module.css";
 import { BigContainer } from "../../style-app";
 import { Row, Col } from "react-grid-system";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { CategoryGet } from "../../redux/category/index";
 
 import logo from "../../assets/header/workwearlogo.png";
 
 const Footer = () => {
+  // useEffect(() => {
+
+  // }, [])
+  const handleTop = () => {
+    window.scrollTo(0, 0)
+  }
   const { t } = useTranslation();
+  const dispatch = useDispatch()
+  function LanguValue() {
+    return window.localStorage.getItem("i18nextLng");
+  }
+  const categoryGets = useSelector((state) => state.category.categoryGet?.data)
+  useEffect(() => {
+    dispatch(CategoryGet())
+  }, [])
   return (
     <>
       <div className={styles.footer_section}>
@@ -16,16 +32,21 @@ const Footer = () => {
           <Row className={styles.footer_row}>
             <Col className={styles.footer_col} lg={3} md={6} sm={12}>
               <div className={styles.logo_box}>
-                <NavLink to="/">
+                <NavLink to="/" className={styles.img_links}>
                   <img height={53} src={logo} alt="logo" />
                 </NavLink>
-                <p>{t("Footer.0")}</p>
-                <a className={styles.underline} href="tel:+380 630 130 103">
-                  +380 630 130 103
+                <br />
+                <p></p>
+                <a className={styles.underline} href="tel:+998 (71) 279 85 47">
+                  +998 (71) 279 85 47
                 </a>
                 <br />
-                <a href="mailto:example@gmail.com">example@gmail.com</a>
-                <div className={styles.social_box}>
+                <a className={styles.underline} href="tel:+998 (71) 279 88 47">
+                  +998 (71) 279 88 47
+                </a>
+                <br />
+                {/* <a href="mailto:example@gmail.com">example@gmail.com</a> */}
+                {/* <div className={styles.social_box}>
                   <a href="#">
                     <i
                       style={{ color: "#1877F2" }}
@@ -44,24 +65,29 @@ const Footer = () => {
                       class="bx bxl-linkedin-square"
                     ></i>
                   </a>
-                </div>
+                </div> */}
               </div>
             </Col>
             <Col className={styles.footer_col} lg={3} md={6} sm={6}>
               <h4>{t("Footer.1")}</h4>
               <ul className={styles.footer_list}>
-                <li>
-                  <NavLink to="#">{t("Footer.2")}</NavLink>
-                </li>
-                <li>
-                  <NavLink to="#">{t("Footer.3")}</NavLink>
-                </li>
-                <li>
-                  <NavLink to="#">{t("Footer.4")}</NavLink>
-                </li>
-                <li>
-                  <NavLink to="#">{t("Footer.5")}</NavLink>
-                </li>
+                {
+                  categoryGets.map(elem => (
+                    <li>
+                      <NavLink onClick={handleTop} to={`/catalog/${elem.id}`}>
+                        {LanguValue() === "ru" ? (
+                          elem.title_ru
+                        ) : LanguValue() === "uz" ? (
+                          elem.title_uz
+                        ) : LanguValue() === "en" ? (
+                          elem.title_en
+                        ) : (
+                          elem.title_ru
+                        )}
+                      </NavLink>
+                    </li>
+                  ))
+                }
               </ul>
             </Col>
             <Col className={styles.footer_col} lg={3} md={6} sm={6}>

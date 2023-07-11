@@ -21,7 +21,7 @@ export const NewsPut = createAsyncThunk(
   async ({ body, id }) => {
     return await axios
       .put(`${API_URL}/news/${id}`, body)
-      .then((response) => console.log(response.data));
+      .then((response) => response.data);
   }
 );
 
@@ -135,7 +135,6 @@ const NewsSlice = createSlice({
       state.uploadNews.Success = true;
       state.uploadNews.Loading = false;
       state.uploadNews.data = action.payload;
-      // console.log( );
     },
     [UploadImage.rejected]: (state, action) => {
       state.uploadNews.Error = true;

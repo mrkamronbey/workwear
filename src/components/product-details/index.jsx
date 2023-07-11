@@ -17,7 +17,7 @@ const ProductDetailsComponent = () => {
   const dispatch = useDispatch()
   const productGets = useSelector((state) => state.product.productGet?.data)
   const findData = productGets.filter(elem => elem.id == id)
-  console.log(findData.map(elem => elem.title_ru))
+
 
   useEffect(() => {
     dispatch(ProductGet())
@@ -35,7 +35,7 @@ const ProductDetailsComponent = () => {
             {
               findData.map(elem => (
                 <>
-                  <Col className={styles.details_col} lg={8} md={12} xs={12} sm={12}>
+                  <Col className={styles.details_col} lg={7} md={12} xs={12} sm={12}>
                     <div className={styles.details_wrapper}>
                       <h4>
                         <span> {LanguValue() === "ru" ? (
@@ -157,7 +157,7 @@ const ProductDetailsComponent = () => {
                       </ul>
                     </div>
                   </Col>
-                  <Col className={styles.details_col} lg={4} md={12} xs={12} sm={12}>
+                  <Col className={styles.details_col} lg={5} md={12} xs={12} sm={12}>
                     <img src={elem.image} alt="workwearimg" />
                   </Col></>
               ))

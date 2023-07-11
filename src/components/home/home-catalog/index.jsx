@@ -31,7 +31,7 @@ const HomeCatalog = () => {
           <Row className={styles.catalog_row}>
             {
               categoryGets.slice(0, 1).map(elem => (
-                <Col className={styles.catalog_col} lg={8} md={12} sm={12} sx={12}>
+                <Col className={styles.catalog_col} lg={7} md={12} sm={12} sx={12}>
                   <NavLink className={styles.catalog_col_box_link} to={`/catalog/${elem.id}`}>
                     <img src={elem.image} alt="catalog-img" />
                   </NavLink>
@@ -39,42 +39,37 @@ const HomeCatalog = () => {
               ))
             }
 
-            <Col className={styles.catalog_col} lg={4} md={12} sm={12} sx={12}>
-              {
-                categoryGets.slice(1, 2).map(elem => (
-                  <div className={styles.catalog_col_box}>
-                    <NavLink className={styles.catalog_col_box_link} to={`/catalog/${elem.id}`}>
-                      <img src={elem.image} alt="catalog-img" />
-                    </NavLink>
-                  </div>
-                ))
-              }
-              <div className={styles.catalog_col_wrapp}>
+            <Col className={styles.catalog_col} lg={5} md={12} sm={12} sx={12}>
+              <Row className={styles.catalog_rows}>
+                {
+                  categoryGets.slice(1, 2).map(elem => (
+                    <Col className={styles.catalog_cols} lg={12}>
+                      <NavLink className={styles.catalog_col_box_link} to={`/catalog/${elem.id}`}>
+                        <img src={elem.image} alt="catalog-img" />
+                      </NavLink>
+                    </Col>
+                  ))
+                }
+
                 {
                   categoryGets.slice(2, 3).map(elem => (
-                    <NavLink className={styles.catalog_col_box_links} to={`/catalog/${elem.id}`}>
-                      <img
-                        className={styles.catalog_img}
-                        src={elem.image}
-                        alt="catalog-img"
-                      />
-                    </NavLink>
+                    <Col className={styles.catalog_cols} lg={6}>
+                      <NavLink className={styles.catalog_col_box_link} to={`/catalog/${elem.id}`}>
+                        <img src={elem.image} alt="catalog-img" />
+                      </NavLink>
+                    </Col>
                   ))
                 }
                 {
                   categoryGets.slice(3, 4).map(elem => (
-                    <NavLink className={styles.catalog_col_box_links} to={`/catalog/${elem.id}`}>
-                      <img
-                        className={styles.catalog_img}
-                        src={elem.image}
-                        alt="catalog-img"
-                      />
-                    </NavLink>
+                    <Col className={styles.catalog_cols} lg={6}>
+                      <NavLink className={styles.catalog_col_box_link} to={`/catalog/${elem.id}`}>
+                        <img src={elem.image} alt="catalog-img" />
+                      </NavLink>
+                    </Col>
                   ))
                 }
-
-
-              </div>
+              </Row>
             </Col>
           </Row>
 

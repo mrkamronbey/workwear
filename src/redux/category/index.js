@@ -24,7 +24,7 @@ export const CategoryPut = createAsyncThunk(
   async ({ body, id }) => {
     return await axios
       .put(`${API_URL}/category/${id}`, body)
-      .then((response) => console.log(response.data));
+      .then((response) => response.data);
   }
 );
 
@@ -139,7 +139,6 @@ const CategorySlice = createSlice({
       state.uploadCategoryImage.Success = true;
       state.uploadCategoryImage.Loading = false;
       state.uploadCategoryImage.data = action.payload;
-      // console.log( );
     },
     [UploadCategoryImage.rejected]: (state, action) => {
       state.uploadCategoryImage.Error = true;

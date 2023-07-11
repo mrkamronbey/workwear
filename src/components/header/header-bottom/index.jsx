@@ -5,6 +5,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./style.css";
 import { Dropdown, Space } from "antd";
+import { DownOutlined } from '@ant-design/icons';
 import { useDispatch, useSelector } from "react-redux";
 import { CategoryGet } from "../../../redux/category/index";
 
@@ -40,7 +41,7 @@ const HeaderBottom = () => {
     })
   ))
 
-  console.log(pathname);
+  
   useEffect(() => {
     window.addEventListener("scroll", isSticky);
     return () => {
@@ -67,8 +68,9 @@ const HeaderBottom = () => {
                     items,
                   }}
                 >
-                  <a>
+                  <a style={{ display: 'flex', alignItems: "center" }}>
                     <Space>{t("Header.0")}</Space>
+                    <i style={{marginLeft: "5px", fontSize: "14px", marginTop: "1px"}} class='bx bxs-down-arrow'></i>
                   </a>
                 </Dropdown>
               </li>

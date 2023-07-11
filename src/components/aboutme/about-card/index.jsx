@@ -27,7 +27,7 @@ const AboutCard = () => {
             <Col className={styles.about_card_col} lg={6} md={12} sm={12}>
                 <div className={styles.about_card_item}>
                     <h4>{t("AboutMe.10")}</h4>
-                    <p>{t("AboutMe.11")}</p>
+                    <p>{t("AboutMe.9")}</p>
                 </div>
             </Col>
             <Col className={styles.about_card_col} lg={6} md={12} sm={12}>

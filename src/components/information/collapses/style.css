@@ -32,4 +32,11 @@
   }
 }
 
+@media only screen and (max-width: 391px) {
+  .ant-collapse-header-text {
+    font-size: 15px !important;
+    max-width: 200px;
+  }
+}
+
 

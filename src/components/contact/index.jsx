@@ -15,48 +15,55 @@ import { message } from 'antd';
 const ContactComponent = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const [name, setName] = useState(null);
-  const [phone, setPhone] = useState(null);
-  const [email, setEmail] = useState(null)
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('')
   const [disableds, setDisableds] = useState(true);
   const contactPost = useSelector((state) => state.contact);
   const [messageApi, contextHolder] = message.useMessage();
-  console.log(contactPost)
+  
   const key = 'updatable';
   const openMessage = () => {
     messageApi.open({
       key,
       type: 'loading',
       content: 'Loading...',
+      style: {
+        padding: "10px 20px",
+        fontSize: "16px",
+        fontWeight: "500"
+      },
     });
-
-    contactPost.postContact.Success == true ?
+    contactPost.postContact.Success == true || contactPost.postContact.Error == false ?
       setTimeout(() => {
         messageApi.open({
           key,
-          type: 'error',
-          content: 'This is an error message!',
+          type: 'success',
+          content: t("Contact.21"),
           duration: 2,
+          style: {
+            padding: "10px 20px",
+            fontSize: "16px",
+            fontWeight: "500"
+          },
         });
-      }, 2000) : setTimeout(() => {
+        setTimeout(() => {
+          window.location.reload()
+        }, 3000)
+      }, 2500) : setTimeout(() => {
         messageApi.open({
           key,
-          type: 'success',
-          content: 'This is a success message!',
+          type: 'error',
+          content: t("Contact.22"),
           duration: 2,
+          style: {
+            padding: "10px 20px",
+            fontSize: "16px",
+            fontWeight: "500"
+          },
         });
-      }, 2000)
-  };
-
-  // {
-  //   contactPost.postContact.Success == true ? {
-  //     name: name.value == '',
-  //     phone: phone.value == '',
-  //     email: email.value == ''
-  //   } : null
-  // }
-
-
+      }, 2500)
+  }
 
   const HandleSubmit = async (e) => {
     e.preventDefault();
@@ -65,9 +72,9 @@ const ContactComponent = () => {
         name: name,
         phone_number: phone,
         email: email
-      })
-    );
+      }),
 
+    );
   };
   useEffect(() => {
     !phone || !name || !email ? setDisableds(true) : setDisableds(false);
@@ -93,15 +100,55 @@ const ContactComponent = () => {
                     <h4>{t("Contact.4")}</h4>
                     <p>{t("Contact.17")}</p>
                   </div>
+                  <div className={styles.contact_locals}>
+                    <h4>{t("Contact.24")}</h4>
+                    <p>{t("Contact.23")}</p>
+                  </div>
                   <div className={styles.contact_time_box}>
                     <h4>
-                      {t("Contact.5")} <span>08:00 - 18:00</span>
+                      {t("Contact.5")}
                     </h4>
-                    <a href="tel:+8 800 511 02 67">8 800 511 02 67</a>
+                    <p>08:00 - 18:00</p>
+                    <h4>
+                      {t("Contact.19")}
+                    </h4>
+                    <a href="tel:+998 (93) 570 75 85">+998 (93) 570 75 85</a>
                     <br />
-                    <a href="tel:+8 919 046 48 49">8 919 046 48 49</a>
+                    <a href="tel:+998 (98) 127 29 60">+998 (98) 127 29 60</a>
+                    <h4>
+                      {t("Contact.18")}
+                    </h4>
+                    <a href="tel:+998 (71) 279 85 47">+998 (71) 279 85 47</a>
+                    <br />
+                    <a href="tel:+998 (71) 279 88 47">+998 (71) 279 88 47</a>
                   </div>
-                  <div className={styles.contact_inn}>
+                  {/* <div className={styles.social_box}>
+                    <h4>
+                      {t("Contact.20")}
+                    </h4>
+                    <a href="#">
+                      <i
+                        style={{ color: "#fff" }}
+                        class="bx bxl-facebook-circle"
+                      ></i>
+                      <span>Facebook</span>
+                    </a>
+                    <a href="#">
+                      <i
+                        style={{ color: "#fff" }}
+                        class="bx bxl-instagram"
+                      ></i>
+                      <span>Instagram</span>
+                    </a>
+                    <a href="#">
+                      <i
+                        style={{ color: "#fff" }}
+                        class="bx bxl-linkedin-square"
+                      ></i>
+                      <span>Linkedin</span>
+                    </a>
+                  </div> */}
+                  {/* <div className={styles.contact_inn}>
                     <ul>
                       <li>
                         <div>
@@ -144,7 +191,7 @@ const ContactComponent = () => {
                         </div>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </Col>
               <Col className={styles.contact_col} lg={7}>
@@ -154,7 +201,7 @@ const ContactComponent = () => {
                     <div className={styles.form_box}>
                       <div className={styles.input_box}>
                         <CommonInput onChange={(e) => setName(e.target.value)} type='text' required placeholder={t("Contact.12")} />
-                        <CommonInput onChange={(e) => setEmail(e.target.value)} type='email' required placeholder={t("Contact.13")} />
+                        <CommonInput onChange={(e) => setEmail(e.target.value)} type='email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required placeholder={t("Contact.13")} />
                       </div>
                       <CommonInput onChange={(e) => setPhone(e.target.value)} type='tel' required placeholder={t("Request.4")} />
                     </div>
@@ -170,9 +217,10 @@ const ContactComponent = () => {
               </Col>
             </Row>
           </div>
+
           <div className={styles.contact_map}>
             <iframe
-              src="https://yandex.uz/map-widget/v1/?ll=64.626410%2C40.014107&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxODg2NjEwMzkxEkZPyrt6YmVraXN0b24sIEJ1eG9ybyB2aWxveWF0aSwgVm9ia2VudCB0dW1hbmksIEt1bXVzaGtlbnQgYWhvbGkgcHVua3RpIgoN70CBQhWIDiBC&sctx=ZAAAAAgBEAAaKAoSCcueBDbnUVFAERGPxMvTp0RAEhIJnZ53Y0Fh0z8RMqoM424QwT8iBgABAgMEBSgKOABAo58GSAFqAnV6nQHNzEw9oAEAqAEAvQFIGc7awgELueHomnCN79ja9ATqAQDyAQD4AQCCAgY3IGRheXOKAgCSAgCaAgxkZXNrdG9wLW1hcHM%3D&sll=64.626410%2C40.014107&sspn=0.019867%2C0.008919&text=7%20days&z=15.93"
+              src="https://yandex.uz/map-widget/v1/?ll=69.173313%2C41.216595&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0NTcwNTQ5NTkzEmFPyrt6YmVraXN0b24sIFRvc2hrZW50IHZpbG95YXRpLCBaYW5naW90YSB0dW1hbmksIE1hZGFuaXlhdCBhaG9saSBwdW5rdGksIEFtaXIgVGVtdXIga28nY2hhc2ksIDJBIgoNvFiKQhXK3SRC&z=16.43"
               width="100%"
               height="500"
               frameborder="0"

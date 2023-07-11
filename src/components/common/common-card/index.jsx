@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { Card } from "antd";
+const { Meta } = Card;
 
 const CommonCard = ({
   style,
@@ -16,10 +17,9 @@ const CommonCard = ({
       <Card
         hoverable
         style={style}
-        cover={<img alt="example" style={{aspectRatio: 1 / 1}} src={coverImg} />}
+        cover={<img alt="example"  style={{ aspectRatio: 1 / 1 }} src={coverImg} />}
       >
-        {isText == true ? <h4 style={headingStyle}>{heading}</h4> : null}
-        <p style={textStyle}>{title}</p>
+        <Meta title={isText == true ? heading : null} description={title} />
       </Card>
     </>
   );

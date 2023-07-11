@@ -4,7 +4,7 @@ import { BigContainer } from "../../../style-app";
 import { Col, Row } from "react-grid-system";
 import { useTranslation } from "react-i18next";
 
-import Services from "../../../assets/services/services.png";
+import Services from "../../../assets/about.png";
 
 const AboutSecond = () => {
     const {t} = useTranslation()

@@ -7,6 +7,7 @@ import AboutSecond from "./about-second";
 import AboutCard from "./about-card";
 import AboutDifferens from "./about-differens";
 import AboutSlider from "./about-slider";
+import PartnerSlider from '../home/partner-slider/index'
 
 import AboutHeroImg from "../../assets/home/home-hero-img.png";
 
@@ -24,7 +25,7 @@ const AboutComponent = () => {
       <AboutSecond />
       <AboutCard />
       <AboutDifferens />
-      <AboutSlider />
+      <PartnerSlider />
       <RequestComponent />
     </>
   );

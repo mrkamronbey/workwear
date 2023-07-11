@@ -56,6 +56,8 @@
 .ant-dropdown-trigger{
   height: 100% !important;
   cursor: pointer;
+  display: flex !important;
+  align-items: center !important;
 }
 
 /* .nav_list > li .isActvie {

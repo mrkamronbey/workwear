@@ -13,6 +13,7 @@ import partner2 from "../../../assets/partner/partner2.png";
 import partner3 from "../../../assets/partner/partner3.png";
 import partner4 from "../../../assets/partner/partner4.png";
 import partner5 from "../../../assets/partner/partner5.png";
+import partner6 from "../../../assets/partner/partner6.png";
 
 const Partner = () => {
   const { t } = useTranslation();
@@ -76,13 +77,7 @@ const Partner = () => {
                 <img className={styles.partner_img} src={partner5} alt="" />
               </div>
               <div className={styles.partner_slid_div}>
-                <img className={styles.partner_img} src={partner2} alt="" />
-              </div>
-              <div className={styles.partner_slid_div}>
-                <img className={styles.partner_img} src={partner1} alt="" />
-              </div>
-              <div className={styles.partner_slid_div}>
-                <img className={styles.partner_img} src={partner4} alt="" />
+                <img className={styles.partner_img} src={partner6} alt="" />
               </div>
             </Slider>
           </div>

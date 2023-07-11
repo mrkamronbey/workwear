@@ -63,7 +63,7 @@ const MenuComponent = () => {
           variant="outline"
         />
         <MenuList>
-          <MenuItem>
+          {/* <MenuItem>
             <div className={styles.menu_box}>
               <Dropdown
                 menu={{
@@ -78,7 +78,7 @@ const MenuComponent = () => {
                 </a>
               </Dropdown>
             </div>
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem>
             <div className={styles.menu_box}>
               <NavLink

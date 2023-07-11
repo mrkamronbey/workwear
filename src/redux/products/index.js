@@ -21,7 +21,7 @@ export const ProductPut = createAsyncThunk(
   async ({ body, id }) => {
     return await axios
       .put(`${API_URL}/products/${id}`, body)
-      .then((response) => console.log(response.data));
+      .then((response) => response.data);
   }
 );
 
@@ -135,7 +135,6 @@ const ProductSlice = createSlice({
       state.uploadProjects.Success = true;
       state.uploadProjects.Loading = false;
       state.uploadProjects.data = action.payload;
-      // console.log( );
     },
     [UploadImage.rejected]: (state, action) => {
       state.uploadProjects.Error = true;

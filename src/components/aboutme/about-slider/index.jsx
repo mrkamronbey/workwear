@@ -55,55 +55,30 @@ const AboutSlider = () => {
       <div className={styles.about_slider_section}>
         <BigContainer>
           <div className={styles.about_slider_wrapp}>
-            <p>{t("AboutMe.37")}</p>
-            <h4>{t("AboutMe.38")}</h4>
+            <h4>{t("AboutMe.24")}</h4>
             <Slider {...settings}>
               <div className={styles.slider_item}>
                 <div className={styles.slider_box}>
                   <img src={Slider1} alt="" />
-                  <p>{t("AboutMe.39")}</p>
+                  <p>{t("AboutMe.25")}</p>
                 </div>
               </div>
               <div className={styles.slider_item}>
                 <div className={styles.slider_box}>
                   <img src={Slider2} alt="" />
-                  <p>{t("AboutMe.40")}</p>
+                  <p>{t("AboutMe.26")}</p>
                 </div>
               </div>
               <div className={styles.slider_item}>
                 <div className={styles.slider_box}>
                   <img src={Slider3} alt="" />
-                  <p>{t("AboutMe.41")}</p>
+                  <p>{t("AboutMe.27")}</p>
                 </div>
               </div>
               <div className={styles.slider_item}>
                 <div className={styles.slider_box}>
                   <img src={Slider4} alt="" />
-                  <p>{t("AboutMe.42")}</p>
-                </div>
-              </div>
-              <div className={styles.slider_item}>
-                <div className={styles.slider_box}>
-                  <img src={Slider1} alt="" />
-                  <p>{t("AboutMe.39")}</p>
-                </div>
-              </div>
-              <div className={styles.slider_item}>
-                <div className={styles.slider_box}>
-                  <img src={Slider2} alt="" />
-                  <p>{t("AboutMe.40")}</p>
-                </div>
-              </div>
-              <div className={styles.slider_item}>
-                <div className={styles.slider_box}>
-                  <img src={Slider3} alt="" />
-                  <p>{t("AboutMe.41")}</p>
-                </div>
-              </div>
-              <div className={styles.slider_item}>
-                <div className={styles.slider_box}>
-                  <img src={Slider4} alt="" />
-                  <p>{t("AboutMe.42")}</p>
+                  <p>{t("AboutMe.28")}</p>
                 </div>
               </div>
             </Slider>
