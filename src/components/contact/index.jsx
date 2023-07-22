@@ -12,6 +12,8 @@ import { Row, Col } from "react-grid-system";
 import { useState, useEffect } from "react";
 import { message } from 'antd';
 
+import WeChat from '../../assets/slider/wechat.png'
+
 const ContactComponent = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
@@ -88,8 +90,9 @@ const ContactComponent = () => {
         heroText={t("Contact.1")}
         heroBtn={t("Contact.2")}
         isBtn={true}
+        id="#request"
       />
-      <div className={styles.contact_section}>
+      <div id="request" className={styles.contact_section}>
         <BigContainer>
           <h4 className={styles.contact_title}>{t("Contact.3")}</h4>
           <div className={styles.contact_row_wrapp}>
@@ -122,32 +125,33 @@ const ContactComponent = () => {
                     <br />
                     <a href="tel:+998 (71) 279 88 47">+998 (71) 279 88 47</a>
                   </div>
-                  {/* <div className={styles.social_box}>
+                  <div className={styles.social_box}>
                     <h4>
                       {t("Contact.20")}
                     </h4>
                     <a href="#">
                       <i
                         style={{ color: "#fff" }}
-                        class="bx bxl-facebook-circle"
+                        class="bx bxl-telegram"
                       ></i>
-                      <span>Facebook</span>
+                      <span>Telegram</span>
                     </a>
                     <a href="#">
                       <i
                         style={{ color: "#fff" }}
-                        class="bx bxl-instagram"
+                        class="bx bxl-whatsapp"
                       ></i>
-                      <span>Instagram</span>
+                      <span>Whatsapp</span>
                     </a>
                     <a href="#">
-                      <i
+                      {/* <i
                         style={{ color: "#fff" }}
                         class="bx bxl-linkedin-square"
-                      ></i>
-                      <span>Linkedin</span>
+                      ></i> */}
+                      <img width="30px" height='30px' src={WeChat} alt="" />
+                      <span>We Chat</span>
                     </a>
-                  </div> */}
+                  </div>
                   {/* <div className={styles.contact_inn}>
                     <ul>
                       <li>

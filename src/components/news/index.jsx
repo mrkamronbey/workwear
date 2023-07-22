@@ -31,6 +31,7 @@ const NewsComponent = () => {
         heroText={t("News.1")}
         heroBtn={t("News.2")}
         isBtn={true}
+        id="#request"
       />
       <div className={styles.news_section}>
         <BigContainer>

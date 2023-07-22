@@ -24,6 +24,8 @@ const Collapses = () => {
                     <li>{t("Custumer.21")}</li>
                     <li>{t("Custumer.11")}</li>
                     <li>{t("Custumer.22")}</li>
+                    <p className="variant">{t("Custumer.33")}</p>
+                    <p className="variant">{t("Custumer.34")}</p>
                     <li>{t("Custumer.12")}</li>
                     <li>{t("Custumer.23")}</li>
                     <li>{t("Custumer.24")}</li>
@@ -58,9 +60,9 @@ const Collapses = () => {
               children: (
                 <div className={styles.accor_content}>
                   <ul>
-                    <li>{t("Custumer.27")}</li>
                     <li>{t("Custumer.28")}</li>
                     <li>{t("Custumer.29")}</li>
+                    <li>{t("Custumer.27")}</li>
                     <li>{t("Custumer.30")}</li>
                   </ul>
                 </div>

@@ -12,7 +12,7 @@ const HeroCommon = ({ heroTitle, heroText, heroImg, heroBtn, isBtn, id }) => {
             <Col className={styles.home_hero_col} lg={6} md={6} sx={12} sm={12}>
               <h2>{heroTitle}</h2>
               <p>{heroText}</p>
-              {isBtn == true ? <button className={styles.hero_btn} id={id}>{heroBtn}</button> : null}
+              {isBtn == true ? <a className={styles.hero_btn} href={id}>{heroBtn}</a> : null}
             </Col>
             <Col className={styles.home_hero_col} lg={6} md={6} sx={12} sm={12}>
               <img src={heroImg} alt="hero-img" />

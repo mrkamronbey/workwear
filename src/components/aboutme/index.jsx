@@ -21,6 +21,7 @@ const AboutComponent = () => {
         heroText={t("AboutMe.1")}
         heroBtn={t("AboutMe.2")}
         isBtn={true}
+        id="#request"
       />
       <AboutSecond />
       <AboutCard />

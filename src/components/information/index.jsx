@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./style.module.css";
 import { BigContainer } from "../../style-app";
 import HeroCommon from "../common/hero/index";
-import Request from "../request/index";
+import RequestComponent from "../request/index";
 import Tables from "./tables";
 import Collapses from "./collapses";
 
@@ -27,7 +27,7 @@ const InformationComponent = () => {
         heroText={t("Custumer.1")}
         heroBtn={t("Custumer.2")}
         isBtn={true}
-        id="request"
+        id="#request"
       />
       <div className={styles.inform_section}>
         <BigContainer>
@@ -54,7 +54,7 @@ const InformationComponent = () => {
           </div>
         </BigContainer>
       </div>
-      <Request />
+      <RequestComponent />
     </>
   );
 };

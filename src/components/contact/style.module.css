@@ -66,6 +66,9 @@
   line-height: 27px;
   color: #ffffff;
 }
+.social_box > a > img{
+  margin-right: 20px;
+}
 .social_box > a > i {
   font-size: 30px;
   margin-right: 20px;
